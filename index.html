@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background: #111;
+      color: #fff;
+      display: flex;
+    }
+    #controls {
+      width: 260px;
+      padding: 12px;
+      background: #111;
+    }
+    canvas { display: block; }
+    .section-label { font-weight: bold; margin-top: 12px; }
+    .slider-group { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div id="controls"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="helpers.js"></script>
+  <script src="ui.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cloud Bar</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: monospace;
-      background: #111;
-      color: #fff;
-      display: flex;
-    }
-    #controls {
-      width: 260px;
-      padding: 12px;
-      background: #111;
-    }
-    canvas { display: block; }
-    .section-label { font-weight: bold; margin-top: 12px; }
-    .slider-group { margin-bottom: 10px; }
-  </style>
-</head>
-<body>
-  <div id="controls"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-  <script src="helpers.js"></script>
-  <script src="ui.js"></script>
-  <script src="sketch.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shape Generator</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: monospace;
+        background: #111;
+        color: #fff;
+        display: flex;
+      }
+      #controls {
+        padding: 10px;
+        width: 300px; 
+        background: #111;
+        font-family: monospace;
+        font-size: 12px;
+      }
+      canvas {
+        display: block;
+      }
+      .section-label {
+        font-weight: bold;
+        margin-top: 12px;
+        margin-bottom: 4px;
+      }
+      /* Consistent spacing for control panel elements */
+      #controls > div > div, /* Labels for sliders, etc. */
+      #controls > div > button, 
+      #controls > div > select,
+      #controls > div > input[type="range"], /* Sliders */
+      #controls > div > label /* Labels next to checkboxes */ { 
+        margin-bottom: 4px; 
+        display: block; /* Make divs and labels take full width for spacing */
+      }
+      #controls > div > input[type="checkbox"] + label {
+          display: inline-block; /* Keep checkbox label inline with checkbox */
+          margin-left: 4px;
+          margin-bottom: 8px; /* Add more space below checkboxes */
+      }
+       #controls > div > input[type="checkbox"] {
+          margin-bottom: 8px; /* Add more space below checkboxes */
+      }
+      #controls > div > button {
+          margin-top: 6px; 
+          margin-bottom: 8px; /* Space below buttons */
+      }
+      hr {
+          border: 1px solid #333;
+          margin-top: 8px;
+          margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="helpers.js"></script>
+    <script src="ui.js"></script>
+    <script src="sketch.js"></script>
+  </body>
 </html>
